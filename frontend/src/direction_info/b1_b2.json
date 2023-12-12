@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "start": "building 1",
+        "end": "building 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [106.695218, 10.729366],
+          [106.696318, 10.72934]
+        ]
+      }
+    }
+  ]
+}

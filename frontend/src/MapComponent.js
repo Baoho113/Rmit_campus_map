@@ -52,7 +52,7 @@ function MapComponent() {
         },
         draw: {
           polygon: true,
-          polyline: false,
+          polyline: true,
           circle: false,
           marker: true,
           circlemarker: false,
