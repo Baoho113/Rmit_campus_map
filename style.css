@@ -72,27 +72,20 @@ nav{
 }
 .hero{
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%,-50%);
+    text-align: center;
 }
 .hero h1{
-    font-size: 70px;
+    font-size: 75px;
     margin-top: 300px;
-    margin-left: 5%;
+    margin-left: 50px;
     letter-spacing: 3px;
-    color: #fff;
-    text-align: center;
-}
-.hero h2{
-    margin-left: 3%;
-    font-size: 70px;
-    letter-spacing: 3px;
-    color: #fff;
-    text-align: center;
+    color: #c4f309;
 }
 .hero span{
-    color: #E1FF67;
+    color: #CE3030;
     text-transform: uppercase;
 
 }
