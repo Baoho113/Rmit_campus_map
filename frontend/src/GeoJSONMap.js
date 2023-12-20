@@ -162,7 +162,7 @@ const GeoJSONMap = () => {
     <div>
       <NavigationBar handleDirection={handleDirection} />
       {/* Render the NavigationBar */}
-      <div id="map" style={{ height: "500px" }}></div>
+      <div id="map" style={{ height: "500px", marginTop: 100 }}></div>
       {userLocation && (
         <div className="navigation-bar">
           <p>
