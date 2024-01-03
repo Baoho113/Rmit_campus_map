@@ -1,3 +1,4 @@
+// GeoJSONMap.js
 import React, { useEffect, useState, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -9,39 +10,59 @@ import jsonRoutes from "./direction_info/b1_b2.json"; // 경로 정보가 들어
 const GeoJSONMap = () => {
   const [selectedBuilding, setSelectedBuilding] = useState(null);
   const [userLocation, setUserLocation] = useState(null);
-  const mapRef = useRef(); //to store map object
+  const mapRef = useRef(); // to store map object
   const handleDirection = (start, end) => {
     console.log("start point:", start);
     console.log("end point:", end);
-    const selectedRoute = jsonRoutes.features.find(
-      (route) =>
-        route.properties.start === start && route.properties.end === end
-    );
 
-    if (selectedRoute) {
-      const routeCoordinates = selectedRoute.geometry.coordinates;
-      const reversedCoordinates = routeCoordinates.map((coord) =>
-        coord.reverse()
-      );
+    // Check if the start point is "current"
+    if (start === "current") {
+      navigator.geolocation.getCurrentPosition((location) => {
+        const { latitude, longitude } = location.coords;
+        setUserLocation([latitude, longitude]);
 
-      const routePolyline = L.polyline(reversedCoordinates, {
-        color: "blue",
-        weight: 3,
-      }).addTo(mapRef.current);
-      routePolyline.bringToFront();
+        const userMarker = L.marker([latitude, longitude], {
+          icon: L.icon({
+            iconUrl: "/images/person.png",
+            iconSize: [32, 32],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32],
+          }),
+        }).addTo(mapRef.current);
 
-      // 맵의 영역을 선이 그려진 영역으로 이동합니다.
-      // const bounds = L.latLngBounds(routeCoordinates.map(coord => L.latLng(coord[1], coord[0])));
-      // mapRef.current.fitBounds(bounds);
-      const bounds = L.latLngBounds(
-        reversedCoordinates.map((coord) => L.latLng(coord[1], coord[0]))
-      );
+        userMarker.bindPopup("Your Location").openPopup();
 
-      mapRef.current.fitBounds(routePolyline.getBounds());
+        // Draw a straight line from the user's current location to the end point
+        const routeCoordinates = [userLocation, end];
+        const routePolyline = L.polyline(routeCoordinates, {
+          color: "red",
+          weight: 5,
+        }).addTo(mapRef.current);
+
+        routePolyline.bringToFront();
+        mapRef.current.fitBounds(routePolyline.getBounds());
+      });
     } else {
-      console.log("Cannot find routes");
+      const selectedRoute = jsonRoutes.features.find(
+        (route) =>
+          route.properties.start === start && route.properties.end === end
+      );
+
+      if (selectedRoute) {
+        const routeCoordinates = selectedRoute.geometry.coordinates;
+
+        const routePolyline = L.polyline(routeCoordinates, {
+          color: "red",
+          weight: 5,
+        }).addTo(mapRef.current);
+        routePolyline.bringToFront();
+        mapRef.current.fitBounds(routePolyline.getBounds());
+      } else {
+        console.log("Cannot find routes");
+      }
     }
   };
+
   useEffect(() => {
     // Create a map and store it in the ref
     mapRef.current = L.map("map", {
@@ -58,6 +79,8 @@ const GeoJSONMap = () => {
     const handleLocation = (location) => {
       const { latitude, longitude } = location.coords;
       setUserLocation([latitude, longitude]);
+      console.log("latitude is", latitude);
+      console.log("longitude is", longitude);
 
       // Add a marker for the user's location
       const userMarker = L.marker([latitude, longitude], {
@@ -78,14 +101,7 @@ const GeoJSONMap = () => {
     } else {
       console.error("Geolocation is not supported by this browser.");
     }
-    // get user location
-    const getUserLocation = () => {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(handleLocation);
-      } else {
-        console.error("Geolocation is not supported by this browser.");
-      }
-    };
+
     // Add university layer
     const univLayerGroup = L.geoJSON(univLayer, {
       style: {
@@ -139,20 +155,6 @@ const GeoJSONMap = () => {
       }
     });
 
-    // // Draw arrows between buildings
-    // buildingPolygons.forEach((sourceBuilding) => {
-    //   buildingPolygons.forEach((targetBuilding) => {
-    //     if (sourceBuilding !== targetBuilding) {
-    //       const sourceLatLng = sourceBuilding.getBounds().getCenter();
-    //       const targetLatLng = targetBuilding.getBounds().getCenter();
-
-    //       L.polyline([sourceLatLng, targetLatLng], {
-    //         color: "red",
-    //       }).addTo(mapRef.current);
-    //     }
-    //   });
-    // });
-
     return () => {
       mapRef.current.remove();
     };
@@ -183,3 +185,4 @@ const GeoJSONMap = () => {
 };
 
 export default GeoJSONMap;
+

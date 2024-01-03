@@ -1,5 +1,3 @@
-// NavigationBar.js
-
 import React, { useState } from "react";
 
 const NavigationBar = ({ handleDirection }) => {
@@ -8,16 +6,23 @@ const NavigationBar = ({ handleDirection }) => {
 
   const handlestartChange = (e) => {
     setstart(e.target.value);
-    console.log("시작점: " + e.target.value);
+    console.log("start point in navigation bar: " + e.target.value);
   };
 
   const handleendChange = (e) => {
     setend(e.target.value);
-    console.log("엔드포인트 바꼈는지: " + e.target.value);
+    console.log("end point in navigation bar: " + e.target.value);
   };
 
   const handleDirectionClick = () => {
-    handleDirection(start, end);
+    if (start === "current") {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const { latitude, longitude } = position.coords;
+        handleDirection([latitude, longitude], end);
+      });
+    } else {
+      handleDirection(start, end);
+    }
   };
 
   return (
@@ -26,6 +31,7 @@ const NavigationBar = ({ handleDirection }) => {
       <label htmlFor="start">Start Point:</label>
       <select id="start" value={start} onChange={handlestartChange}>
         <option value="SELECT">SELECT</option>
+        <option value="current">current location</option>
         <option value="building 1">building 1</option>
         <option value="building 2">building 2</option>
         {/* Add more options if needed */}
