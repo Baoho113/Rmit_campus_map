@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react';
+// App.js
+import React from 'react';
 import axios from 'axios';
 import MapComponent from './MapComponent';
-import GeoJSONMap from './GeoJSONMap';
 
 function App() {
-  const [data, setData] = useState('');
+  const [data, setData] = React.useState('');
 
-  useEffect(() => {
-    axios.get('/api/data')
-      .then(response => {
+  React.useEffect(() => {
+    axios
+      .get('/api/data')
+      .then((response) => {
         setData(response.data.message);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error fetching data:', error);
       });
   }, []);
 
   return (
     <div>
-      {/* <GeoJSONMap /> */}
-      { /* Comment out the component you don't want to display */}
+      {/* Comment out the component you don't want to display */}
       <MapComponent />
     </div>
   );

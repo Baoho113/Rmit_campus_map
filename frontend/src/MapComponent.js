@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+// MapComponent.js
+import React, { useEffect, useRef, useState } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import 'leaflet-draw/dist/leaflet.draw.css';
@@ -8,11 +9,20 @@ import axios from 'axios';
 function MapComponent() {
   const mapRef = useRef(null);
   const drawnItems = useRef(null);
+  const [geoJsonPath, setGeoJsonPath] = useState('');
+  const [selectedPolygon, setSelectedPolygon] = useState(null);
 
   useEffect(() => {
     if (!mapRef.current) {
-      const map = L.map('map').setView([10.7298, 106.69451], 20);
-      L.tileLayer('images/B2L2.png', {}).addTo(map);
+      const map = L.map('map', { drawControl: true }).setView([37.5665, 126.9780], 13);
+
+      const imageUrl = 'images/B2L2.png';
+      const imageBounds = [
+        [37.527, 126.83],
+        [37.608, 127.13],
+      ];
+
+      L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
       drawnItems.current = new L.FeatureGroup();
       map.addLayer(drawnItems.current);
@@ -37,38 +47,67 @@ function MapComponent() {
       map.on(L.Draw.Event.CREATED, (event) => {
         const layer = event.layer;
         drawnItems.current.addLayer(layer);
+
+        const geoJSON = drawnItems.current.toGeoJSON();
+        saveShape(geoJSON);
       });
     }
   }, []);
 
-  const saveShape = () => {
-    if (drawnItems.current) {
-      const geoJSON = drawnItems.current.toGeoJSON();
-      const stringifiedData = JSON.stringify(geoJSON, null, 2);
+  const saveShape = async (geoJSON) => {
+    try {
+      // Save GeoJSON to the server
+      const response = await axios.post('/api/savePolygon', {
+        polygon: geoJSON,
+      });
 
-      const blob = new Blob([stringifiedData], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'drawn_shape.geojson';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // Set the returned GeoJSON path
+      setGeoJsonPath(response.data.geoJsonPath);
 
-      axios.post('/api/save-shape', { shapeData: geoJSON })
-        .then(response => {
-          console.log(response.data.message);
-        })
-        .catch(error => {
-          console.error('Error saving shape:', error);
-        });
+      console.log(response.data.message);
+    } catch (error) {
+      console.error('Error saving shape:', error);
     }
   };
 
+  useEffect(() => {
+    const loadGeoJson = async () => {
+      try {
+        const response = await axios.get('/api/getSavedPolygon');
+        setGeoJsonPath(response.data.geoJsonPath);
+      } catch (error) {
+        console.error('Error loading shape:', error);
+      }
+    };
+
+    loadGeoJson();
+  }, []);
+
+  useEffect(() => {
+    if (geoJsonPath) {
+      axios.get(geoJsonPath).then((response) => {
+        const geoJSON = response.data;
+        L.geoJSON(geoJSON, {
+          onEachFeature: (feature, layer) => {
+            layer.on('click', () => {
+              setSelectedPolygon(feature);
+            });
+          },
+        }).addTo(mapRef.current);
+      });
+    }
+  }, [geoJsonPath]);
+
   return (
     <div>
-      <div id="map" style={{ height: '500px' }}></div>
-      <button onClick={saveShape}>Save Shape</button>
+      <div id="map" style={{ height: '620px', margin: 'auto' }}></div>
+      <button onClick={() => saveShape(drawnItems.current.toGeoJSON())}>Save Shape</button>
+      {selectedPolygon && (
+        <div>
+          <h4>Selected Polygon:</h4>
+          <pre>{JSON.stringify(selectedPolygon, null, 2)}</pre>
+        </div>
+      )}
     </div>
   );
 }
