@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MapComponent from "./MapComponent";
 import GeoJSONMap from "./GeoJSONMap";
+import MapWithPolygon from "./MapWithPolygon";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/map" element={<GeoJSONMap />} />
             {/* <GeoJSONMap /> */}
             <Route path="/drawmap" element={<MapComponent />} />
+            <Route path="/imagemap" element={<MapWithPolygon/>} />
           </Routes>
         </div>
       </BrowserRouter>
