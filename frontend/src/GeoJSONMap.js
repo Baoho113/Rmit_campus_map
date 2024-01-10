@@ -5,7 +5,8 @@ import "leaflet/dist/leaflet.css";
 import geojsonFeature from "./building_info/buildingCollection";
 import univLayer from "./univLayer.json";
 import NavigationBar from "./NavigationBar"; // Import the NavigationBar component
-import jsonRoutes from "./direction_info/b1_b2.json"; // 경로 정보가 들어있는 JSON 파일 가져오기
+import jsonRoutes from "./direction_info/b1_b2.json"; // 경로 정보가 들어있는 JSON 파일 가져오기'
+import currentLocation from "./direction_info/building2Marker";
 
 const GeoJSONMap = () => {
   const [selectedBuilding, setSelectedBuilding] = useState(null);
@@ -75,9 +76,29 @@ const GeoJSONMap = () => {
       attribution: "© OpenStreetMap contributors",
     }).addTo(mapRef.current);
 
+    // Add the building marker
+      // Access coordinates from currentLocation and create a marker
+      const coordinates = currentLocation.features[0].geometry.coordinates;
+      const description = currentLocation.features[0].properties.description;
+  
+      const icon = L.icon({
+        iconUrl: "/images/person.png",
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -32],
+      });
+  
+      const marker = L.marker(coordinates, { icon: icon }).addTo(mapRef.current);
+      marker.bindPopup(description).openPopup();
+
+      console.log("coordinates is ",coordinates)
+      const current = L.marker(coordinates.reverse());
+      marker.bindPopup(description).openPopup();
+    // };
+    /*  
     // Function to handle user's location
-    const handleLocation = (location) => {
-      const { latitude, longitude } = location.coords;
+    const handleLocation = (currentLocation) => {  
+      const { latitude, longitude } = currentLocation.feature.geometry.coordinates;
       setUserLocation([latitude, longitude]);
       console.log("latitude is", latitude);
       console.log("longitude is", longitude);
@@ -94,14 +115,14 @@ const GeoJSONMap = () => {
 
       userMarker.bindPopup("Your Location").openPopup();
     };
-
+ */
     // Get user's location using Geolocation API
-    if (navigator.geolocation) {
+    /*     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(handleLocation);
     } else {
       console.error("Geolocation is not supported by this browser.");
     }
-
+ */
     // Add university layer
     const univLayerGroup = L.geoJSON(univLayer, {
       style: {
@@ -180,9 +201,9 @@ const GeoJSONMap = () => {
           <p>Description of {selectedBuilding}</p>
         </div>
       )}
+
     </div>
   );
 };
 
 export default GeoJSONMap;
-
