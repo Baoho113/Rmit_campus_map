@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Routes, Route, Link } from 'react-router-dom';
+import {Routes, Route, Link, Switch } from 'react-router-dom';
 import axios from 'axios';
 import MapComponent from './MapComponent';
 import GeoJSONMap from './GeoJSONMap';

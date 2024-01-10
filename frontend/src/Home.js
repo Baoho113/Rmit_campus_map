@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Home = () => {
     return (
         <>
@@ -9,10 +11,10 @@ const Home = () => {
         <br />
         SaiGon South Campus
       </h1>
-      <a href="building.html" className="download">
+      <Link to="/map" className="download">
         {" "}
         Get Started
-      </a>
+      </Link>
     </section>
   </section>
   <section className="course" id="course">
