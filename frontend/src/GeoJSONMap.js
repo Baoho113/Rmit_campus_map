@@ -5,8 +5,10 @@ import "leaflet/dist/leaflet.css";
 import geojsonFeature from "./building_info/buildingCollection";
 import univLayer from "./univLayer.json";
 import NavigationBar from "./NavigationBar"; // Import the NavigationBar component
-import jsonRoutes from "./direction_info/b1_b2.json"; // 경로 정보가 들어있는 JSON 파일 가져오기'
 import currentLocation from "./direction_info/building2Marker";
+import jsonRoutes from "./direction_info/b1_b2.json"; // 경로 정보가 들어있는 JSON 파일 가져오기
+import VerticalTab from "./components/VerticalTab";
+import VTlist from "./components/VTlist";
 
 const GeoJSONMap = () => {
   const [selectedBuilding, setSelectedBuilding] = useState(null);
@@ -170,7 +172,7 @@ const GeoJSONMap = () => {
       );
 
       if (clickedBuilding) {
-        const clickedBuildingName = clickedBuilding.feature.properties.name;
+        const clickedBuildingName = clickedBuilding.features.properties.name;
         clickedBuilding.bindPopup(clickedBuildingName).openPopup();
         setSelectedBuilding(null);
       }
@@ -183,25 +185,25 @@ const GeoJSONMap = () => {
 
   return (
     <div>
-      <NavigationBar handleDirection={handleDirection} />
+      <VerticalTab data={geojsonFeature.features} />
+      {/* <NavigationBar handleDirection={handleDirection} /> */}
       {/* Render the NavigationBar */}
-      <div id="map" style={{ height: "500px" }}></div>
       {userLocation && (
-        <div className="navigation-bar">
+        <div className="navigation-bar" >
           <p>
             Your Location: {userLocation[0]}, {userLocation[1]}
           </p>
         </div>
       )}
+      <div id="map" style={{ display: "block", height: 660, marginTop: 76, zIndex: 10 }}></div>
       {selectedBuilding && (
-        <div className="navigation-bar">
+        <div className="navigation-bar" style={{position: "absolute", top: 100, left: 350, padding: 20, color: "black", backgroundColor: "white", zIndex: 11, border: '1px solid', borderRadius: 20 }}>
           <button onClick={() => setSelectedBuilding(null)}>X</button>
           <h2>{selectedBuilding}</h2>
           <img src={`images/selectedBuilding.jpg`} alt={selectedBuilding} />
           <p>Description of {selectedBuilding}</p>
         </div>
       )}
-
     </div>
   );
 };
