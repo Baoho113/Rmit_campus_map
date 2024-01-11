@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
 import MapComponent from "./MapComponent/DrawingMapComponent";
 import MapViewcomponent from "./MapComponent/MapViewComponent";
-import MapWithImage from "./MapComponent/MapWithImage";
+import DrawingOnImg from "./MapComponent/DrawingOnImg";
 import ImgMapViewComponent from "./MapComponent/ImgMapViewComponent";
 import Home from "./Home";
 
@@ -52,7 +52,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/map" element={<MapViewcomponent />} />
         <Route path="/drawmap" element={<MapComponent />} />
-        <Route path="/drawimgmap" element={<MapWithImage />} />
+        <Route path="/drawimgmap" element={<DrawingOnImg />} />
         <Route path="/imgmap" element={<ImgMapViewComponent />} />
         
       </Routes>

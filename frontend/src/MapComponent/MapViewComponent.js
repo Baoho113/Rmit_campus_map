@@ -189,11 +189,7 @@ const MapViewcomponent = () => {
       <NavigationBar handleDirection={handleDirection} />
       {/* Render the NavigationBar */}
       {userLocation && (
-        <div className="navigation-bar">
-          <p>
-            Your Location: {userLocation[0]}, {userLocation[1]}
-          </p>
-        </div>
+        <div className="navigation-bar"/>
       )}
       <div id="map"></div>
       {selectedBuilding && (
