@@ -4,11 +4,13 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import geojsonFeature from "../building_info/buildingCollection";
 import univLayer from "../univLayer.json";
-import NavigationBar from "../NavigationBar"; // Import the NavigationBar component
+import NavigationBar from "./NavigationBar"; // Import the NavigationBar component
 import currentLocation from "../direction_info/building2Marker";
-import jsonRoutes from "../direction_info/b1_b2.json"; // 경로 정보가 들어있는 JSON 파일 가져오기
+import jsonRoutes from "../direction_info/buildingRoutes.json"; // 경로 정보가 들어있는 JSON 파일 가져오기
 import VerticalTab from "../components/VerticalTab";
 import VTlist from "../components/VTlist";
+import "../App.css";
+import { Container } from "reactstrap";
 
 const GeoJSONMap = () => {
   const [selectedBuilding, setSelectedBuilding] = useState(null);
@@ -186,7 +188,7 @@ const GeoJSONMap = () => {
   return (
     <div>
       <VerticalTab data={geojsonFeature.features} />
-      {/* <NavigationBar handleDirection={handleDirection} /> */}
+      <NavigationBar handleDirection={handleDirection} />
       {/* Render the NavigationBar */}
       {userLocation && (
         <div className="navigation-bar">
@@ -195,10 +197,7 @@ const GeoJSONMap = () => {
           </p>
         </div>
       )}
-      <div
-        id="map"
-        style={{ display: "block", height: 660, marginTop: 76, zIndex: 10 }}
-      ></div>
+      <div id="map"></div>
       {selectedBuilding && (
         <div
           className="navigation-bar"

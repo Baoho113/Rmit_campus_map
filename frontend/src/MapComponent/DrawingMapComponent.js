@@ -1,36 +1,8 @@
-// import React, { useEffect } from "react";
-// import "leaflet/dist/leaflet.css";
-// import L from "leaflet";
-
-// function MapComponent() {
-//   useEffect(() => {
-//     const mapElement = document.getElementById("map");
-//     if (mapElement && !mapElement._leaflet_id) {
-//       // Check if map is not already initialized
-//       const map = L.map("map").setView([10.7298, 106.69451], 20); // RMIT Vietnam Ho Chi Minh Campus coordinates
-
-//       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-//         attribution: "© OpenStreetMap contributors",
-//       }).addTo(map);
-//     }
-//   }, []);
-
-//   return <div id="map" style={{ height: "500px" }}></div>;
-// }
-
-// export default MapComponent;
-
-// 클라이언트(MapComponent.js) 측
-
-
-
-
 import React, { useEffect, useRef } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import 'leaflet-draw/dist/leaflet.draw.css';
 import 'leaflet-draw';
-import axios from 'axios';
 
 function MapComponent() {
   const mapRef = useRef(null);
@@ -83,14 +55,6 @@ function MapComponent() {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-
-      // axios.post('/api/save-shape', { shapeData: geoJSON })
-      //   .then(response => {
-      //     console.log(response.data.message);
-      //   })
-      //   .catch(error => {
-      //     console.error('Error saving shape:', error);
-      //   });
     }
   };
 

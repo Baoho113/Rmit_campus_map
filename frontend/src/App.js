@@ -6,17 +6,6 @@ import GeoJSONMap from "./MapComponent/MapViewComponent";
 import Home from "./Home";
 
 function App() {
-  /*   const [data, setData] = useState('');
-
-  useEffect(() => {
-    axios.get('/api/data')
-      .then(response => {
-        setData(response.data.message);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  }, []); */
 
   return (
     <div>
