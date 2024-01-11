@@ -188,9 +188,7 @@ const MapViewcomponent = () => {
       <VerticalTab data={geojsonFeature.features} />
       <NavigationBar handleDirection={handleDirection} />
       {/* Render the NavigationBar */}
-      {userLocation && (
-        <div className="navigation-bar"/>
-      )}
+      {userLocation && <div className="navigation-bar" />}
       <div id="map"></div>
       {selectedBuilding && (
         <div
