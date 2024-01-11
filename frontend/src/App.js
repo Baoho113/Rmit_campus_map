@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
 import MapComponent from "./MapComponent/DrawingMapComponent";
-import GeoJSONMap from "./MapComponent/MapViewComponent";
+import MapViewcomponent from "./MapComponent/MapViewComponent";
+import MapWithImage from "./MapComponent/MapWithImage";
+import ImgMapViewComponent from "./MapComponent/ImgMapViewComponent";
 import Home from "./Home";
 
 function App() {
@@ -48,8 +50,11 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/map" element={<GeoJSONMap />} />
+        <Route path="/map" element={<MapViewcomponent />} />
         <Route path="/drawmap" element={<MapComponent />} />
+        <Route path="/drawimgmap" element={<MapWithImage />} />
+        <Route path="/imgmap" element={<ImgMapViewComponent />} />
+        
       </Routes>
     </div>
     // <GeoJSONMap />
