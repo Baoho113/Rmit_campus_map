@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./VTlist.css";
-import GeoJSONMap from "../GeoJSONMap";
+import GeoJSONMap from "../MapComponent/MapViewComponent";
 
 function VTlist(props) {
   const Clicked = () => {
@@ -11,7 +11,10 @@ function VTlist(props) {
   };
 
   return (
-    <li key={props.index} style={{ listStyle: "none", textAlign: "left", bottom: 500 }}>
+    <li
+      key={props.index}
+      style={{ listStyle: "none", textAlign: "left", bottom: 500 }}
+    >
       <button
         className="buttonBuilding"
         onClick={Clicked}
@@ -24,7 +27,6 @@ function VTlist(props) {
         {props.data.properties.name}
       </button>
     </li>
-    
   );
 }
 

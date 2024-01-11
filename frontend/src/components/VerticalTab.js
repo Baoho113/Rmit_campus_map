@@ -4,7 +4,7 @@ import { Container, Row, Col } from "reactstrap";
 import VTlist from "./VTlist";
 
 import "./VerticalTab.css";
-import GeoJSONMap from "../GeoJSONMap";
+import GeoJSONMap from "../MapComponent/MapViewComponent";
 
 function VerticalTab(props) {
   const [activeTabId, setActiveTabId] = useState(0);
