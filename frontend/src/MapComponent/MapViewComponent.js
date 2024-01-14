@@ -135,7 +135,7 @@ const MapViewcomponent = () => {
       },
       onEachFeature: (feature, layer) => {
         layer.on("click", () => {
-          const clickedBuildingName = feature.properties.name;
+          const clickedBuildingName = feature;
           setSelectedBuilding(clickedBuildingName);
         });
       },
@@ -156,7 +156,7 @@ const MapViewcomponent = () => {
         layer.bindPopup(feature.properties.name);
         buildingPolygons.push(layer);
         layer.on("click", () => {
-          const clickedBuildingName = feature.properties.name;
+          const clickedBuildingName = feature;
           setSelectedBuilding(clickedBuildingName);
         });
       },
@@ -192,11 +192,11 @@ const MapViewcomponent = () => {
       <div id="map"></div>
       {selectedBuilding && (
         <div
-          className="navigation-bar"
           style={{
+            maxWidth: 300,
             position: "absolute",
-            top: 100,
-            left: 350,
+            top: 250,
+            left: 370,
             padding: 20,
             color: "black",
             backgroundColor: "white",
@@ -206,9 +206,9 @@ const MapViewcomponent = () => {
           }}
         >
           <button onClick={() => setSelectedBuilding(null)}>X</button>
-          <h2>{selectedBuilding}</h2>
-          <img src={`images/selectedBuilding.jpg`} alt={selectedBuilding} />
-          <p>Description of {selectedBuilding}</p>
+          <h2>{selectedBuilding.properties.name}</h2>
+          <img src={`images/selectedBuilding.jpg`} alt={selectedBuilding.properties.name} />
+          <p>{selectedBuilding.properties.description}</p>
         </div>
       )}
     </div>
