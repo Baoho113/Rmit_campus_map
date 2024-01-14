@@ -1,0 +1,26 @@
+.container {
+  width: 170px;
+  position: relative;
+  float: left;
+}
+
+.container span {
+  font-size: 50px;
+  z-index: 10;
+  position: absolute;
+  display: inline-block;
+  transition: transform 0.5s;
+  top: 10;
+  left: 15px;
+  width: 2px;
+  height: 50px;
+}
+
+
+.styledTabList {
+  width: 170px;
+}
+
+.styledTabList {
+  padding: 0;
+}

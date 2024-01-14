@@ -1,0 +1,26 @@
+.buttonBuilding {
+  background-color: mintcream;
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+  border-top: none;
+  outline: none;
+  font-size: 25px;
+  height: 100px;
+  width: 100%;
+  text-align: left;
+  right: 50px;
+  text-transform: capitalize;
+  padding-left: 30px;
+}
+
+.buttonBuilding:hover,
+.buttonBuilding:focus {
+  background-color: #000;
+}
+
+.buttonBuilding:hover,
+.buttonBuilding:active,
+.buttonBuilding:focus {
+  color: #fff;
+  outline: 0px;
+}
