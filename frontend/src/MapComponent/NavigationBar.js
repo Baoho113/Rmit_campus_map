@@ -27,7 +27,7 @@ const NavigationBar = ({ handleDirection }) => {
 
   return (
     <div className="navigation-bar">
-      <h2 style={{top: 5, left: 50 }}>Direction</h2>
+      <h2>Direction</h2>
       <label htmlFor="start">FROM</label>
       <select id="start" value={start} onChange={handlestartChange}>
         <option value="SELECT">SELECT</option>
@@ -39,6 +39,7 @@ const NavigationBar = ({ handleDirection }) => {
       <label htmlFor="ens">TO</label>
       <select id="end" value={end} onChange={handleendChange}>
         <option value="SELECT">SELECT</option>
+        <option value="building 2">current location</option>
         <option value="building 1">building 1</option>
         <option value="building 2">building 2</option>
         {/* Add more options if needed */}

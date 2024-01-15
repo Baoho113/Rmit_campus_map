@@ -38,27 +38,21 @@
 }
 
 .navigation-bar {
+  height: 25vh;
+  width: 150px;
+  position: absolute;
+  top: 100px;
+  right: 15px;
+  padding: 20px;
+  color: #fff;
   background-color: #000;
-  color: white;
-  padding: 15px;
-  padding-left: 325px;
-  margin-top: 70px;
-  font-size: large;
-  font-family: "Times New Roman";
-  
+  z-index: 11;
+  border: "1px solid";
+  border-radius: 20px;
 }
-/* .navigation-bar,
-.navigation-bar * {
-  margin: 100;
-  padding: 0;
-  position: relative;
-  box-sizing: border-box;
+.navigation-bar h2{
+  margin-bottom: 10px;
 }
-.navigation-bar {
-  position: relative;
-  background-color: #E6E6E6;
-  border-radius: 4px;
-} */
 .navigation-bar select {
   margin: 10px;
   font-size: 1rem;
@@ -89,8 +83,9 @@
   border-left: 5px solid transparent;
 }
 
-#map > div {
-  height: 75.9vh;
+#map {
+  margin-top: 70px;
+  height: 92.5vh;
   z-index: 0;
   /* position: absolute; */
 }
@@ -126,6 +121,7 @@
   touch-action: manipulation;
   white-space: nowrap;
   margin-top: 10px;
+  margin-left: 7px;
 }
 
 .button-3:focus:not(:focus-visible):not(.focus-visible) {

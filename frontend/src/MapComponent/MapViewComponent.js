@@ -186,16 +186,17 @@ const MapViewcomponent = () => {
   return (
     <div>
       <VerticalTab data={geojsonFeature.features} />
-      <NavigationBar handleDirection={handleDirection} />
+      
       {/* Render the NavigationBar */}
       {userLocation && <div className="navigation-bar" />}
       <div id="map"></div>
+      <NavigationBar handleDirection={handleDirection} />
       {selectedBuilding && (
         <div
           style={{
             maxWidth: 300,
             position: "absolute",
-            top: 250,
+            top: 100,
             left: 370,
             padding: 20,
             color: "black",
