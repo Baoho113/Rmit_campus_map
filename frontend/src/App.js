@@ -6,7 +6,8 @@ import MapViewcomponent from "./MapComponent/MapViewComponent";
 import DrawingOnImg from "./MapComponent/DrawingOnImg";
 import ImgMapViewComponent from "./MapComponent/ImgMapViewComponent";
 import Home from "./Home";
-
+import Calendar from "./calender";
+import Contact from "./Contact";
 function App() {
 
   return (
@@ -24,21 +25,18 @@ function App() {
             </Link>
           </li>
           <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Booking</a>
+            <Link to="/calender">Booking</Link>
           </li>
           <li>
             <Link to="/map">Map</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
         <ul className="account">
           <li>
-            <a href="#">Login</a>
+            <Link to="/login">Login</Link>
           </li>
           <li>
             <a href="#" className="link">
@@ -54,7 +52,8 @@ function App() {
         <Route path="/drawmap" element={<MapComponent />} />
         <Route path="/drawimgmap" element={<DrawingOnImg />} />
         <Route path="/imgmap" element={<ImgMapViewComponent />} />
-        
+        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/calender" element={<Calendar />} /> */}
       </Routes>
     </div>
     // <GeoJSONMap />

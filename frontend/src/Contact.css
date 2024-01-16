@@ -1,0 +1,71 @@
+.container1 {
+    margin-top: 90px;
+    position: relative;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.white-frame {
+    background: rgba(255, 82, 82, 0.5);
+    padding: 100px;
+    width: 400px;
+    height: 150px;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+h1 {
+    color: #333;
+}
+
+.container2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.form-group .submit-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
