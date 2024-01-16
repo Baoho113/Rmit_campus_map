@@ -1,7 +1,10 @@
 .container {
-  width: 170px;
+  width: 316px;
+  height: 90vh;
   position: relative;
   float: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .container span {
