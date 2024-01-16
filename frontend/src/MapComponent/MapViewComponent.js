@@ -208,7 +208,7 @@ const MapViewcomponent = () => {
         >
           <button onClick={() => setSelectedBuilding(null)}>X</button>
           <h2>{selectedBuilding.properties.name}</h2>
-          <img src={`images/selectedBuilding.jpg`} alt={selectedBuilding.properties.name} />
+          <img style={{width: 300}} src={selectedBuilding.properties.image} alt={selectedBuilding.properties.name} />
           <p>{selectedBuilding.properties.description}</p>
         </div>
       )}

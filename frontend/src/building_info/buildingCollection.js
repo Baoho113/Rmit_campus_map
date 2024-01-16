@@ -10,6 +10,7 @@ const geojson = {
       },
       geometry: {
         type: "Polygon",
+        image: "./public/image/b1.jpeg",
         coordinates: [
           [
             [106.694707, 10.729503],
@@ -29,7 +30,7 @@ const geojson = {
       type: "Feature",
       properties: {
         name: "building 2",
-        description: "This is Building 2",
+        description: "This is building 2",
       },
       geometry: {
         type: "Polygon",
@@ -57,8 +58,8 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "building 3",
-        description: "This is Building 3",
+        name: "canteen",
+        description: "This is canteen",
       },
       geometry: {
         type: "Polygon",
@@ -76,8 +77,8 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "building 4",
-        description: "This is Building 4",
+        name: "building 9",
+        description: "This is Building 9",
       },
       geometry: {
         type: "Polygon",
@@ -97,8 +98,8 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "building 5",
-        description: "This is Building 5",
+        name: "building 8",
+        description: "This is Building 8",
       },
       geometry: {
         type: "Polygon",
@@ -118,11 +119,12 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "building 6",
-        description: "This is Building 6",
+        name: "building 10",
+        description: "This is Building 10",
       },
       geometry: {
         type: "Polygon",
+       
         coordinates: [
           [
             [106.692346, 10.729882],
@@ -149,8 +151,8 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "building 6",
-        description: "This is Building 6",
+        name: "parking 2",
+        description: "This is parking 2",
       },
       geometry: {
         type: "Polygon",
@@ -172,8 +174,8 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "building 6",
-        description: "This is Building 6",
+        name: "Parking 1",
+        description: "This is parking 1",
       },
       geometry: {
         type: "Polygon",
@@ -191,8 +193,8 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "building 6",
-        description: "This is Building 6",
+        name: "basketball field",
+        description: "This is basketball field",
       },
       geometry: {
         type: "Polygon",
@@ -210,8 +212,8 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "building 6",
-        description: "This is Building 6",
+        name: "Parking 3",
+        description: "This is Parking 3",
       },
       geometry: {
         type: "Polygon",
@@ -229,8 +231,9 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "building 6",
-        description: "This is Building 6",
+        name: "football field",
+        image: "./image/Picture1.png",
+        description: "This is football field",
       },
       geometry: {
         type: "Polygon",
