@@ -24,11 +24,12 @@ function App() {
             </Link>
           </li>
           <li>
-            <Link to="/calender">Booking</Link>
-          </li>
-          <li>
             <Link to="/map">Map</Link>
           </li>
+          <li>
+            <Link to="/imgmap">FloorMap</Link>
+          </li>
+          
           <li>
             <Link to="/contact">Contact</Link>
           </li>
