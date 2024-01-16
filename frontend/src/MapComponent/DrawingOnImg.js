@@ -3,9 +3,9 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-draw/dist/leaflet.draw.css";
 import L from "leaflet";
 import "leaflet-draw";
-import img from "../FloorImages/imgmap.png";
+import img from "../floor_info/floor_img/b2_4.png";
 import "../App.css";
-import ImgPolygon from "./ImgPolygon.json";
+import ImgPolygon from "../floor_info/b2_4.json";
 import VerticalTab from "../components/VerticalTab";
 
 const DrawingOnImg = () => {

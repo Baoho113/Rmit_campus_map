@@ -1,5 +1,6 @@
 {
   "type": "FeatureCollection",
+  "imgUrl":"./floor_img/b2_4.png",
   "features": [
     {
       "type": "Feature",
