@@ -6,7 +6,6 @@ import MapViewcomponent from "./MapComponent/MapViewComponent";
 import DrawingOnImg from "./MapComponent/DrawingOnImg";
 import ImgMapViewComponent from "./MapComponent/ImgMapViewComponent";
 import Home from "./Home";
-// import Calendar from "./calender";
 import Contact from "./Contact";
 function App() {
 
