@@ -31,20 +31,36 @@ const NavigationBar = ({ handleDirection }) => {
       <label htmlFor="start">FROM</label>
       <select id="start" value={start} onChange={handlestartChange}>
         <option value="SELECT">SELECT</option>
-        <option value="building 2">current location</option>
+        <option value="current">Current Location</option>
         <option value="building 1">building 1</option>
         <option value="building 2">building 2</option>
+        <option value="building 8">building 8</option>
+        <option value="building 9">building 9</option>
+        <option value="building 10">building 10</option>
+        <option value="parking 2">parking 2</option>
+        <option value="parking 1">parking 1</option>
+        <option value="cafeteria">cafeteria</option>
+        <option value="basketball field">basketball field</option>
         {/* Add more options if needed */}
       </select>
-      <label htmlFor="ens">TO</label>
+      <label htmlFor="end">TO</label>
       <select id="end" value={end} onChange={handleendChange}>
         <option value="SELECT">SELECT</option>
-        <option value="">current location</option>
+        <option value="current">Current Location</option>
         <option value="building 1">building 1</option>
         <option value="building 2">building 2</option>
+        <option value="building 8">building 8</option>
+        <option value="building 9">building 9</option>
+        <option value="building 10">building 10</option>
+        <option value="parking 2">parking 2</option>
+        <option value="parking 1">parking 1</option>
+        <option value="cafeteria">cafeteria</option>
+        <option value="basketball field">basketball field</option>
         {/* Add more options if needed */}
       </select>
-      <button className="button-3" onClick={handleDirectionClick}>Show Directions</button>
+      <button className="button-3" onClick={handleDirectionClick}>
+        Show Directions
+      </button>
     </div>
   );
 };

@@ -9,7 +9,7 @@ import currentLocation from "../direction_info/building2Marker";
 import jsonRoutes from "../direction_info/buildingRoutes.json"; // 경로 정보가 들어있는 JSON 파일 가져오기
 import VerticalTab from "../components/VerticalTab";
 import "../App.css";
-
+import personImg from "../images/person.png"
 const MapViewcomponent = () => {
   const [selectedBuilding, setSelectedBuilding] = useState(null);
   const [userLocation, setUserLocation] = useState(null);
@@ -69,7 +69,7 @@ const MapViewcomponent = () => {
   useEffect(() => {
     // Create a map and store it in the ref
     mapRef.current = L.map("map", {
-      center: [10.7298, 106.69451],
+      center: [10.7298, 106.69390],
       zoom: 20,
     });
 
@@ -84,7 +84,7 @@ const MapViewcomponent = () => {
     const description = currentLocation.features[0].properties.description;
 
     const icon = L.icon({
-      iconUrl: "/images/person.png",
+      iconUrl: personImg,
       iconSize: [32, 32],
       iconAnchor: [16, 32],
       popupAnchor: [0, -32],
@@ -128,10 +128,10 @@ const MapViewcomponent = () => {
     // Add university layer
     const univLayerGroup = L.geoJSON(univLayer, {
       style: {
-        fillColor: "yellow",
-        color: "black",
-        weight: 1,
-        fillOpacity: 0.2,
+        fillColor: "pink",
+        color: "pink",
+        weight: 3,
+        fillOpacity: 0.3,
       },
       onEachFeature: (feature, layer) => {
         layer.on("click", () => {
@@ -147,10 +147,10 @@ const MapViewcomponent = () => {
     const buildingPolygons = [];
     const layers = L.geoJSON(geojsonFeature, {
       style: {
-        fillColor: "blue",
+        fillColor: "pink",
         color: "black",
-        weight: 1,
-        fillOpacity: 0.3,
+        weight: 2,
+        fillOpacity: 0.4,
       },
       onEachFeature: (feature, layer) => {
         layer.bindPopup(feature.properties.name);
@@ -167,14 +167,18 @@ const MapViewcomponent = () => {
     // Handle click on the map
     mapRef.current.on("click", function (e) {
       const clickedLatLng = e.latlng;
-      const clickedBuilding = buildingPolygons.find((layer) =>
-        layer.getBounds().contains(clickedLatLng)
-      );
+      try {
+        const clickedBuilding = buildingPolygons.find((layer) =>
+          layer.getBounds().contains(clickedLatLng)
+        );
 
-      if (clickedBuilding) {
-        const clickedBuildingName = clickedBuilding.features.properties.name;
-        clickedBuilding.bindPopup(clickedBuildingName).openPopup();
-        setSelectedBuilding(null);
+        if (clickedBuilding) {
+          const clickedBuildingName = clickedBuilding.feature.properties.name;
+          clickedBuilding.bindPopup(clickedBuildingName).openPopup();
+          setSelectedBuilding(null);
+        }
+      } catch (error) {
+        console.error("An error occurred while handling the click:", error);
       }
     });
 

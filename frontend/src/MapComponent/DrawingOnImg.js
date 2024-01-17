@@ -9,6 +9,8 @@ import ImgPolygon from "./ImgPolygon.json";
 import VerticalTab from "../components/VerticalTab";
 
 const DrawingOnImg = () => {
+  const [selectedBuilding, setSelectedBuilding] = useState(null);
+
   const mapContainer = useRef(null);
   const [drawnItems, setDrawnItems] = useState(null);
   const aspectRatio = useRef(null);
@@ -119,7 +121,7 @@ const DrawingOnImg = () => {
 
   return (
     <div>
-      <VerticalTab data={ImgPolygon.features} />
+      <VerticalTab data={ImgPolygon.features} setSelectedBuilding={[selectedBuilding, setSelectedBuilding]}  />
       <div id="imgmap" ref={mapContainer}></div>
       <button onClick={saveGeoJSON}>Save GeoJSON</button>
     </div>
@@ -127,4 +129,3 @@ const DrawingOnImg = () => {
 };
 
 export default DrawingOnImg;
-

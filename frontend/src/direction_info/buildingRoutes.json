@@ -31,6 +31,758 @@
           [10.72934, 106.696318]
         ]
       }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 1",
+      "end": "building 8"
+    },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729424,106.695222],
+          [10.729545,106.695238 ],
+          [10.729556,106.694536],
+          [10.72944,106.694541],
+          [10.729477,106.693532],
+          [10.729239,106.693532]  
+          ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 8",
+      "end": "building 1"
+    },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729424,106.695222],
+          [10.729545,106.695238 ],
+          [10.729556,106.694536],
+          [10.72944,106.694541],
+          [10.729477,106.693532],
+          [10.729239,106.693532]  
+          ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 1",
+      "end": "building 9"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729424,106.695222],
+          [10.729545,106.695238],
+          [10.729556,106.694536],
+          [10.72944,106.694541],
+          [10.729477,106.693532],
+          [10.729239,106.69353 ]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 9",
+      "end": "building 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729424,106.695222],
+          [10.729545,106.695238],
+          [10.729556,106.694536],
+          [10.72944,106.694541],
+          [10.729477,106.693532],
+          [10.729239,106.69353 ]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 1",
+      "end": "building 10"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.72945,106.695024],
+          [10.729535,106.69504],
+          [10.729545,106.694546],
+          [10.729434,106.694536],
+          [10.729482,106.692958]
+         ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 10",
+      "end": "building 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.72945,106.695024],
+          [10.729535,106.69504],
+          [10.729545,106.694546],
+          [10.729434,106.694536],
+          [10.729482,106.692958]
+         ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 10",
+        "end": "building 9"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729482,106.693076],
+          [10.729477,106.69357 ],
+          [10.729698,106.693575]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 9",
+        "end": "building 10"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729482,106.693076],
+          [10.729477,106.69357 ],
+          [10.729698,106.693575]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 10",
+        "end": "building 8"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729498,106.693055],
+          [10.729471,106.693543],
+          [10.729218,106.693554]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 8",
+        "end": "building 10"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729498,106.693055],
+          [10.729471,106.693543],
+          [10.729218,106.693554]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 8",
+        "end": "building 9"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729598,106.693463],
+          [10.729582,106.693581],
+          [10.729361,106.69357],
+          [106.693409,10.729361]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 9",
+        "end": "building 8"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729598,106.693463],
+          [10.729582,106.693581],
+          [10.729361,106.69357],
+          [106.693409,10.729361]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 2",
+        "end": "building 10"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729471,106.696177],
+          [10.72954, 106.696177],
+          [10.72955,106.69452],
+          [10.72944,106.694525],
+          [10.729498,106.693039]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 10",
+        "end": "building 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729471,106.696177],
+          [10.72954, 106.696177],
+          [10.72955,106.69452],
+          [10.72944,106.694525],
+          [10.729498,106.693039]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 2",
+        "end": "building 9"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729482,106.696],
+          [10.729545,106.696005],
+          [10.729529,106.694541],
+          [10.72944,106.69453],
+          [10.729482,106.693538],
+          [10.729693,106.693559]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 9",
+        "end": "building 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729482,106.696],
+          [10.729545,106.696005],
+          [10.729529,106.694541],
+          [10.72944,106.69453],
+          [10.729482,106.693538],
+          [10.729693,106.693559]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 2",
+        "end": "building 8"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729456,106.696086],
+          [10.729545,106.696097],
+          [10.729545,106.69453],
+          [10.72944,106.69452],
+          [10.729471,106.693543],
+          [10.729287,106.693549]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 8",
+        "end": "building 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729456,106.696086],
+          [10.729545,106.696097],
+          [10.729545,106.69453],
+          [10.72944,106.69452],
+          [10.729471,106.693543],
+          [10.729287,106.693549]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 2",
+        "end": "parking 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729471,106.696402],
+          [10.729798,106.696419]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 1",
+        "end": "building 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729471,106.696402],
+          [10.729798,106.696419]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 2",
+        "end": "building 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729471,106.696247],
+          [10.72955,106.696252],
+          [10.729524,106.69563 ],
+          [10.729677,106.695625 ]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 2",
+        "end": "parking 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729471,106.696247],
+          [10.72955,106.696252],
+          [10.729524,106.69563 ],
+          [10.729677,106.695625 ]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 1",
+        "end": "parking 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729398,106.69534],
+          [10.729529,106.695367],
+          [10.729535,106.696386],
+          [10.729819,106.696419]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 1",
+        "end": "building 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729398,106.69534],
+          [10.729529,106.695367],
+          [10.729535,106.696386],
+          [10.729819,106.696419]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 2",
+        "end": "building 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729445,106.695641],
+          [10.729698,106.695619]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 1",
+        "end": "parking 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729445,106.695641],
+          [10.729698,106.695619]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 8",
+        "end": "parking 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729271,106.693549],
+          [10.729466,106.693559],
+          [10.729456,106.694584],
+          [10.729566,106.694627],
+          [10.72955,106.69534],
+          [10.729719,106.695378]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 2",
+        "end": "building 8"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729271,106.693549],
+          [10.729466,106.693559],
+          [10.729456,106.694584],
+          [10.729566,106.694627],
+          [10.72955,106.69534],
+          [10.729719,106.695378]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 1",
+        "end": "building 8"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729282,106.693543],
+          [10.729477,106.693554],
+          [10.729445,106.694643],
+          [10.729566,106.694659],
+          [10.729545,106.696402],
+          [10.729777,106.696424]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 8",
+        "end": "parking 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729282,106.693543],
+          [10.729477,106.693554],
+          [10.729445,106.694643],
+          [10.729566,106.694659],
+          [10.729545,106.696402],
+          [10.729777,106.696424]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 9",
+        "end": "parking 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729682,106.693565],
+          [10.729466,106.693554],
+          [10.72944,106.694621],
+          [10.729535,106.694648],
+          [10.729535,106.695383],
+          [10.729709,106.695394]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 2",
+        "end": "building 9"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729682,106.693565],
+          [10.729466,106.693554],
+          [10.72944,106.694621],
+          [10.729535,106.694648],
+          [10.729535,106.695383],
+          [10.729709,106.695394]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 9",
+        "end": "parking 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729651,106.693549],
+          [10.729477,106.693549],
+          [10.729445,106.694643],
+          [10.72954,106.69467],
+          [10.729556,106.696408],
+          [10.729835,106.696424]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 1",
+        "end": "building 9"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729651,106.693549],
+          [10.729477,106.693549],
+          [10.729445,106.694643],
+          [10.72954,106.69467],
+          [10.729556,106.696408],
+          [10.729835,106.696424]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 2",
+        "end": "building 10"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729487,106.69305],
+          [10.72945,106.694632],
+          [10.729571,106.694664],
+          [10.729561,106.695431],
+          [10.729698,106.695442]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 10",
+        "end": "parking 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729487,106.69305],
+          [10.72945,106.694632],
+          [10.729571,106.694664],
+          [10.729561,106.695431],
+          [10.729698,106.695442]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 1",
+        "end": "building 10"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729482,106.693055],
+          [10.729445,106.694632],
+          [10.729524,106.694654],
+          [10.729545,106.696408],
+          [10.729798,106.696397]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "building 10",
+        "end": "parking 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729482,106.693055],
+          [10.729445,106.694632],
+          [10.729524,106.694654],
+          [10.729545,106.696408],
+          [10.729798,106.696397]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 2",
+        "end": "parking 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729761,106.696097],
+          [10.729745,106.695646]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 1",
+        "end": "parking 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729761,106.696097],
+          [10.729745,106.695646]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 1",
+        "end": "cafeteria"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729777,106.696397],
+          [10.729556,106.696392],
+          [10.729529,106.69482],
+          [10.729703,106.694831]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "cafeteria",
+        "end": "parking 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729777,106.696397],
+          [10.729556,106.696392],
+          [10.729529,106.69482],
+          [10.729703,106.694831]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "basketball field",
+        "end": "parking 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729814,106.696424],
+          [10.72955,106.696413],
+          [10.729529,106.694546],
+          [10.729429,106.69452],
+          [10.72944,106.694423],
+          [10.729614,106.694418]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 1",
+        "end": "basketball field"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729814,106.696424],
+          [10.72955,106.696413],
+          [10.729529,106.694546],
+          [10.729429,106.69452],
+          [10.72944,106.694423],
+          [10.729614,106.694418]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 2",
+        "end": "basketball field"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729714,106.695313],
+          [10.729508,106.695319],
+          [10.729524,106.694536],
+          [10.729461,106.694536],
+          [10.729445,106.694402],
+          [10.729619,106.694391]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "basketball field",
+        "end": "parking 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729714,106.695313],
+          [10.729508,106.695319],
+          [10.729524,106.694536],
+          [10.729461,106.694536],
+          [10.729445,106.694402],
+          [10.729619,106.694391]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "cafeteria",
+        "end": "parking 2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729719,106.695292],
+          [10.729545,106.695287],
+          [10.729545,106.69467],
+          [10.72973,106.694691]
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
+        "start": "parking 2",
+        "end": "cafeteria"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [10.729719,106.695292],
+          [10.729545,106.695287],
+          [10.729545,106.69467],
+          [10.72973,106.694691]
+        ]
+      }
     }
   ]
 }
