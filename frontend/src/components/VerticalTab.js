@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
-
 import VTlist from "./VTlist";
-
 import "./VerticalTab.css";
-import GeoJSONMap from "../MapComponent/MapViewComponent";
 
 function VerticalTab(props) {
   const [activeTabId, setActiveTabId] = useState(0);
+  const [selected, setSelected] = props.setSelectedBuilding;
 
-  function btnClick(id) {
+  function btnClick(id, feature) {
     setActiveTabId(id);
+    setSelected(feature);
     // <GeoJSONMap selected={"building 1"}/>
   }
 
   return (
-    <Container className="container">
+    <Container className="tab">
       <Row>
         <Col sm="3">
           <div className="styledTab">

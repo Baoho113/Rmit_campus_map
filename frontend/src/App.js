@@ -5,8 +5,10 @@ import MapComponent from "./MapComponent/DrawingMapComponent";
 import MapViewcomponent from "./MapComponent/MapViewComponent";
 import DrawingOnImg from "./MapComponent/DrawingOnImg";
 import ImgMapViewComponent from "./MapComponent/ImgMapViewComponent";
-import Home from "./Home";
-import Contact from "./Contact";
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import Login from "./components/Login";
+
 function App() {
 
   return (
@@ -53,6 +55,7 @@ function App() {
         <Route path="/drawimgmap" element={<DrawingOnImg />} />
         <Route path="/imgmap" element={<ImgMapViewComponent />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
         {/* <Route path="/calender" element={<Calendar />} /> */}
       </Routes>
     </div>

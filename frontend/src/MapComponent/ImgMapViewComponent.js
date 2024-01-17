@@ -157,7 +157,7 @@ const ImgMapViewComponent = () => {
 
   return (
     <div>
-      <VerticalTab data={ImgPolygon.features} />
+      <VerticalTab data={ImgPolygon.features} setSelectedBuilding={[selectedBuilding, setSelectedBuilding]}/>
       <div id="imgmap" ref={mapContainer}></div>
     </div>
   );

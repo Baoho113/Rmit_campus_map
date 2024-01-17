@@ -5,7 +5,7 @@ import GeoJSONMap from "../MapComponent/MapViewComponent";
 
 function VTlist(props) {
   const Clicked = () => {
-    props.onClick(props.index);
+    props.onClick(props.index, props.data);
     // const setBuilding = props.data.properties.name;
     // <GeoJSONMap selected={setBuilding}/>
   };

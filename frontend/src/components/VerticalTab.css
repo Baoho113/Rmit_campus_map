@@ -1,4 +1,4 @@
-.container {
+.tab {
   width: 316px;
   height: 90vh;
   position: relative;
@@ -7,7 +7,7 @@
   overflow-x: hidden;
 }
 
-.container span {
+.tab span {
   font-size: 50px;
   z-index: 10;
   position: absolute;

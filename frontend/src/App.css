@@ -90,11 +90,12 @@
   /* position: absolute; */
 }
 
-#imgmap > div {
-  height: 80vh;
-  display:block;
+#imgmap {
+  margin-top: 70px;
+  height: 90vh;
+  /* display:block; */
   z-index: 0;
-  width: 100%;
+  /* width: 100%; */
 }
 
 
@@ -148,11 +149,4 @@
 .button-3:active {
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
-}
-.popoverStyle {
-  z-index: 99999;
-}
-
-a {
-  color: rgba(233, 14, 14, 0.981) ;
 }
