@@ -131,13 +131,13 @@ const ImgMapViewComponent = () => {
         style: {
           fillColor: "blue",
           color: "black",
-          weight: 1,
-          fillOpacity: 0.3,
+          weight: 3,
+          fillOpacity: 0.2,
         },
         onEachFeature: (feature, layer) => {
           layer.bindPopup(feature.properties.name);
           layer.on("click", () => {
-            const clickedBuildingName = feature.properties.name;
+            const clickedBuildingName = feature;
             setSelectedBuilding(clickedBuildingName);
           });
         },
@@ -157,11 +157,35 @@ const ImgMapViewComponent = () => {
 
   return (
     <div>
-      <VerticalTab data={ImgPolygon.features} setSelectedBuilding={[selectedBuilding, setSelectedBuilding]}/>
+      <VerticalTab
+        data={ImgPolygon.features}
+        setSelectedBuilding={[selectedBuilding, setSelectedBuilding]}
+      />
       <div id="imgmap" ref={mapContainer}></div>
+      {selectedBuilding && (
+        <div
+          style={{
+            maxWidth: 300,
+            position: "absolute",
+            top: 100,
+            left: 370,
+            padding: 20,
+            color: "black",
+            backgroundColor: "white",
+            zIndex: 11,
+            border: "1px solid",
+            borderRadius: 20,
+          }}
+        >
+          <button onClick={() => setSelectedBuilding(null)}>X</button>
+          <h2 style={{ textTransform: "capitalize" }}>
+            {selectedBuilding.properties.name}
+          </h2>
+          <p>{selectedBuilding.properties.description}</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default ImgMapViewComponent;
-

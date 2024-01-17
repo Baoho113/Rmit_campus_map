@@ -14,9 +14,16 @@ const MapViewcomponent = () => {
   const [selectedBuilding, setSelectedBuilding] = useState(null);
   const [userLocation, setUserLocation] = useState(null);
   const mapRef = useRef(); // to store map object
+  let routePolyline = null; // Variable to store the drawn polyline
+
   const handleDirection = (start, end) => {
     console.log("start point:", start);
     console.log("end point:", end);
+
+    // Remove existing route polyline if it exists
+    if (routePolyline) {
+      mapRef.current.removeLayer(routePolyline);
+    }
 
     // Check if the start point is "current"
     if (start === "current") {
@@ -37,7 +44,7 @@ const MapViewcomponent = () => {
 
         // Draw a straight line from the user's current location to the end point
         const routeCoordinates = [userLocation, end];
-        const routePolyline = L.polyline(routeCoordinates, {
+        routePolyline = L.polyline(routeCoordinates, {
           color: "red",
           weight: 5,
         }).addTo(mapRef.current);
@@ -54,7 +61,7 @@ const MapViewcomponent = () => {
       if (selectedRoute) {
         const routeCoordinates = selectedRoute.geometry.coordinates;
 
-        const routePolyline = L.polyline(routeCoordinates, {
+        routePolyline = L.polyline(routeCoordinates, {
           color: "red",
           weight: 5,
         }).addTo(mapRef.current);
