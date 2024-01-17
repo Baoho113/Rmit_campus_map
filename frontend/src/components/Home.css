@@ -179,7 +179,7 @@ nav{
 }
 .featured{
     margin: 50px;
-    background-image: url(image/Picture5.png);
+    background-image: url(../../public/image/Picture5.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
