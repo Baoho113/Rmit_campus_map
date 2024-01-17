@@ -9,7 +9,7 @@ import currentLocation from "../direction_info/building2Marker";
 import jsonRoutes from "../direction_info/buildingRoutes.json"; // 경로 정보가 들어있는 JSON 파일 가져오기
 import VerticalTab from "../components/VerticalTab";
 import "../App.css";
-import personImg from "../images/person.png";
+import personImg from "../images/person.png"
 
 const MapViewcomponent = () => {
   const [selectedBuilding, setSelectedBuilding] = useState(null);
@@ -127,10 +127,10 @@ const MapViewcomponent = () => {
     // Add university layer
     const univLayerGroup = L.geoJSON(univLayer, {
       style: {
-        fillColor: "yellow",
-        color: "black",
-        weight: 1,
-        fillOpacity: 0.2,
+        fillColor: "pink",
+        color: "pink",
+        weight: 4,
+        fillOpacity: 0.3,
       },
       onEachFeature: (feature, layer) => {
         layer.on("click", () => {
@@ -146,9 +146,9 @@ const MapViewcomponent = () => {
     const buildingPolygons = [];
     const layers = L.geoJSON(geojsonFeature, {
       style: {
-        fillColor: "blue",
-        color: "black",
-        weight: 1,
+        fillColor: "red",
+        color: "pink",
+        weight: 2,
         fillOpacity: 0.3,
       },
       onEachFeature: (feature, layer) => {
@@ -166,19 +166,14 @@ const MapViewcomponent = () => {
     // Handle click on the map
     mapRef.current.on("click", function (e) {
       const clickedLatLng = e.latlng;
-    
-      try {
-        const clickedBuilding = buildingPolygons.find((layer) =>
-          layer.getBounds().contains(clickedLatLng)
-        );
-    
-        if (clickedBuilding) {
-          const clickedBuildingName = clickedBuilding.feature.properties.name;
-          clickedBuilding.bindPopup(clickedBuildingName).openPopup();
-          setSelectedBuilding(null);
-        }
-      } catch (error) {
-        console.error("An error occurred while handling the click:", error);
+      const clickedBuilding = buildingPolygons.find((layer) =>
+        layer.getBounds().contains(clickedLatLng)
+      );
+
+      if (clickedBuilding) {
+        const clickedBuildingName = clickedBuilding.features.properties.name;
+        clickedBuilding.bindPopup(clickedBuildingName).openPopup();
+        setSelectedBuilding(null);
       }
     });
 
@@ -190,7 +185,7 @@ const MapViewcomponent = () => {
   return (
     <div>
       <VerticalTab data={geojsonFeature.features} />
-
+      
       {/* Render the NavigationBar */}
       {userLocation && <div className="navigation-bar" />}
       <div id="map"></div>
@@ -212,10 +207,7 @@ const MapViewcomponent = () => {
         >
           <button onClick={() => setSelectedBuilding(null)}>X</button>
           <h2>{selectedBuilding.properties.name}</h2>
-          <img
-            src={`images/selectedBuilding.jpg`}
-            alt={selectedBuilding.properties.name}
-          />
+          <img src={`images/selectedBuilding.jpg`} alt={selectedBuilding.properties.name} />
           <p>{selectedBuilding.properties.description}</p>
         </div>
       )}
