@@ -1,7 +1,8 @@
 {
     "type": "Feature",
     "properties": {
-      "name": "RMIT University"
+      "name": "RMIT University",
+      "image": "./image/Picture1.png"
     },
     "geometry": {
       "type": "Polygon",

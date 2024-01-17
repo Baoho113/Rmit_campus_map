@@ -8,6 +8,7 @@ import ImgMapViewComponent from "./MapComponent/ImgMapViewComponent";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
+import About from "./components/About";
 
 function App() {
 
@@ -26,10 +27,13 @@ function App() {
             </Link>
           </li>
           <li>
-            <Link to="/map">Map</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/imgmap">FloorMap</Link>
+            <Link to="/map">Campus Map</Link>
+          </li>
+          <li>
+            <Link to="/imgmap">ClassMap</Link>
           </li>
           
           <li>
@@ -56,6 +60,7 @@ function App() {
         <Route path="/imgmap" element={<ImgMapViewComponent />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/about" element={<About />} />
         {/* <Route path="/calender" element={<Calendar />} /> */}
       </Routes>
     </div>

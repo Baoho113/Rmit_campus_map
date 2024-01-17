@@ -10,7 +10,6 @@ const geojson = {
       },
       geometry: {
         type: "Polygon",
-        image: "./public/image/b1.jpeg",
         coordinates: [
           [
             [106.694707, 10.729503],
@@ -30,7 +29,9 @@ const geojson = {
       type: "Feature",
       properties: {
         name: "building 2",
-        description: "This is building 2",
+        image: "./image/b2.jpg",
+        description:
+          "building 2 is an academic building, contains 5 floors with a special architecture. It has a big auditorium, self-study regions for students, showroom and others features to give students the best experience in learning ",
       },
       geometry: {
         type: "Polygon",
@@ -59,7 +60,9 @@ const geojson = {
       type: "Feature",
       properties: {
         name: "canteen",
-        description: "This is canteen",
+        image: "./image/canteen.jpg",
+        description:
+          "This is a part of building 1, it serves foods and beverages from different culture in the world, also have a vast space to give student comfort and enjoy the meals",
       },
       geometry: {
         type: "Polygon",
@@ -78,7 +81,9 @@ const geojson = {
       type: "Feature",
       properties: {
         name: "building 9",
-        description: "This is Building 9",
+        image: "./image/b9.jpg",
+        description:
+          "This is the dormitory only for RMIT students. Besides modern facilities, it contains good security and the best location to reach every places in school",
       },
       geometry: {
         type: "Polygon",
@@ -99,7 +104,9 @@ const geojson = {
       type: "Feature",
       properties: {
         name: "building 8",
-        description: "This is Building 8",
+        image: "./image/b8.jpg",
+        description:
+          "This is an academic and tutorial buildings for engineering student. Also students usually comes here for self-study, or to attend in differents groups and also there are 2 tops floors for staff only.",
       },
       geometry: {
         type: "Polygon",
@@ -120,11 +127,13 @@ const geojson = {
       type: "Feature",
       properties: {
         name: "building 10",
-        description: "This is Building 10",
+        image: "./image/b10.jpg",
+        description:
+          "Also called as Sport Hall. It contains different club office, and also a place for student to reduce stress and maintain the mental life, healthier and makes more friends in school",
       },
       geometry: {
         type: "Polygon",
-       
+
         coordinates: [
           [
             [106.692346, 10.729882],
@@ -151,8 +160,9 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "parking 2",
-        description: "This is parking 2",
+        name: "parking 1",
+        image: "./image/p1.jpg",
+        description: "This is a parking place for motorbike",
       },
       geometry: {
         type: "Polygon",
@@ -174,8 +184,9 @@ const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "Parking 1",
-        description: "This is parking 1",
+        name: "Parking 2",
+        image: "./image/p2.jpg",
+        description: "This is a parking place for motorbike",
       },
       geometry: {
         type: "Polygon",
@@ -194,7 +205,9 @@ const geojson = {
       type: "Feature",
       properties: {
         name: "basketball field",
-        description: "This is basketball field",
+        image: "./image/basketball.jpg",
+        description:
+          "This is basketball field, where student can play basketball, cheerleading or other sports usually being play here",
       },
       geometry: {
         type: "Polygon",
@@ -213,7 +226,9 @@ const geojson = {
       type: "Feature",
       properties: {
         name: "Parking 3",
-        description: "This is Parking 3",
+        image: "./image/p2.jpg",
+        description:
+          "This is where the school bus located, usually deliver student from different districts in Saigon to school and back home ",
       },
       geometry: {
         type: "Polygon",
@@ -232,8 +247,9 @@ const geojson = {
       type: "Feature",
       properties: {
         name: "football field",
-        image: "./image/Picture1.png",
-        description: "This is football field",
+        image: "./image/football.jpg",
+        description:
+          "This is football field, where student can play football or sometime other sport can be play here",
       },
       geometry: {
         type: "Polygon",
