@@ -39,7 +39,6 @@ const NavigationBar = ({ handleDirection }) => {
         <option value="building 10">building 10</option>
         <option value="parking 2">parking 2</option>
         <option value="parking 1">parking 1</option>
-        <option value="cafeteria">cafeteria</option>
         <option value="basketball field">basketball field</option>
         {/* Add more options if needed */}
       </select>
@@ -54,7 +53,6 @@ const NavigationBar = ({ handleDirection }) => {
         <option value="building 10">building 10</option>
         <option value="parking 2">parking 2</option>
         <option value="parking 1">parking 1</option>
-        <option value="cafeteria">cafeteria</option>
         <option value="basketball field">basketball field</option>
         {/* Add more options if needed */}
       </select>

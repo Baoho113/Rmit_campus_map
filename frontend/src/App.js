@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
 import About from "./components/About";
+import Booking from "./Booking/Booking";
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
           </li>
           <li>
             <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/booking">Booking</Link>
           </li>
           <li>
             <Link to="/map">Campus Map</Link>
@@ -61,7 +65,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/calender" element={<Calendar />} /> */}
+        <Route path="/booking" element={<Booking />} />
       </Routes>
     </div>
     // <GeoJSONMap />
